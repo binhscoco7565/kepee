@@ -11,6 +11,7 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 const createWindow = () => {
 
   function createTray() {
+    // Changing the app icon (This is for system tray I believe)
     let appIcon = new Tray(path.join(__dirname, "/../assets/icons/256x256.png"));
     const contextMenu = Menu.buildFromTemplate([
         {
@@ -37,6 +38,7 @@ const createWindow = () => {
     width: 1270,
     height: 800,
   });
+  // Possible to change this to another page 
   mainWindow.loadURL('https://keep.google.com');
 
   let tray = null;
